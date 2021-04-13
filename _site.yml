@@ -1,0 +1,8 @@
+name: "finding-hal"
+navbar:
+  title: "Finding Hal"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
