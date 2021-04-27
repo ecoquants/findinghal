@@ -2,4 +2,11 @@
 title: "Finding Hal"
 ---
 
-Hello, Hal!
+Hello, and welcome to Finding Hal! We need your help to find living
+white abalone (*Haliotis sorenseni*) in and around the Southern California Bight!
+
+
+### This is the big ticket item!
+[Link to abalone survey](https://forms.gle/5WP6UDLJ9FmhGcLW7)
+
+![Which member of the board are you?](/Users/PikesStuff/github/findinghal/images/boards.jpg)

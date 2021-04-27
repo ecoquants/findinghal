@@ -3,7 +3,15 @@ navbar:
   title: "Finding Hal"
   left:
     - text: "Home"
+      icon: fa-home
       href: index.html
     - text: "About"
+      icon: fa-info
       href: about.html
 output_dir: '.'
+output:
+  html_document:  
+    include: 
+      after_body: footer.html
+    css: style.css  
+  
