@@ -1,0 +1,17 @@
+---
+title: "Locating HAL"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## {.tabset}
+
+### Distribution of Abalone in the North Pacific
+![Distribution of the eight abalone species endemic to the North Pacific](/Users/PikesStuff/github/findinghal/images/abmapnew.jpg)
+
+### Known sitings of white abalone
+![Known sitings of white abalone in California and Baja California](/Users/PikesStuff/github/findinghal/images/sore-map.gif)

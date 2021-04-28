@@ -5,12 +5,18 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
-    - text: "About"
-      icon: fa-info
-      href: about.html
     - text: "Submit Observation"
       icon: fa-paper-plane
       href: ./submit.html
+    - text: "Abalone ID Key"
+      icon: fa-key
+      href: key.html
+    - text: "Abalone Map" 
+      icon: fa-map
+      href: abmap.html
+    - text: "About"
+      icon: fa-info
+      href: about.html
 output_dir: '.'
 output:
   html_document:  
