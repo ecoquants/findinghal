@@ -1,0 +1,18 @@
+---
+title: "Identifying HAL"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+<!--
+Edit here:
+* [key - Google Drawings](https://docs.google.com/drawings/d/17QfEmTxZMHnKHZsaBnFm4ejCXw2eZ4xi897xIzPGx7g/edit)
+Then File > Download > svg to images/key.svg
+-->
+
+```{r, results="asis", warning=F}
+cat(readLines("images/key.svg"))
+```

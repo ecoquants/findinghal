@@ -1,0 +1,13 @@
+---
+title: "Submit Observation"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Please share your observation of white abalone by filling out the:
+
+- [**Submit Form**](https://forms.gle/7ES7mD9mbVvvCtKX9)
+
+Thank you for participating!

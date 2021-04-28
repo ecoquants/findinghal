@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Identifying HAL</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Finding Hal</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fas fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fas fa-info"></span>
+     
+    About
+  </a>
+</li>
+<li>
+  <a href="./submit.html">
+    <span class="fas fa-paper-plane"></span>
+     
+    Submit Observation
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Identifying HAL</h1>
+
+</div>
+
+
+<svg version="1.1" viewBox="0.0 0.0 291.9737532808399 308.87664041994753" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<clipPath id="p.0"><path d="m0 0l291.97375 0l0 308.87665l-291.97375 0l0 -308.87665z" clip-rule="nonzero"/></clipPath><g clip-path="url(#p.0)"><path fill="#000000" fill-opacity="0.0" d="m0 0l291.97375 0l0 308.87665l-291.97375 0z" fill-rule="evenodd"/><path fill="#ff0000" d="m12.288713 245.85564l0 0c0 -21.960922 19.4668 -39.76378 43.480316 -39.76378l0 0c24.01352 0 43.480316 17.802856 43.480316 39.76378l0 0c0 21.960922 -19.466797 39.76378 -43.480316 39.76378l0 0c-24.013514 0 -43.480316 -17.802856 -43.480316 -39.76378z" fill-rule="evenodd"/><path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m12.288713 245.85564l0 0c0 -21.960922 19.4668 -39.76378 43.480316 -39.76378l0 0c24.01352 0 43.480316 17.802856 43.480316 39.76378l0 0c0 21.960922 -19.466797 39.76378 -43.480316 39.76378l0 0c-24.013514 0 -43.480316 -17.802856 -43.480316 -39.76378z" fill-rule="evenodd"/><path fill="#000000" d="m43.505722 252.77565l0 -9.671875l1.46875 0l0 1.46875q0.5625 -1.03125 1.03125 -1.359375q0.484375 -0.328125 1.0625 -0.328125q0.828125 0 1.6875 0.53125l-0.5625 1.515625q-0.609375 -0.359375 -1.203125 -0.359375q-0.546875 0 -0.96875 0.328125q-0.421875 0.328125 -0.609375 0.890625q-0.28125 0.875 -0.28125 1.921875l0 5.0625l-1.625 0zm12.853302 -3.109375l1.6875 0.203125q-0.40625 1.484375 -1.484375 2.3125q-1.078125 0.8125 -2.765625 0.8125q-2.125 0 -3.375 -1.296875q-1.234375 -1.3125 -1.234375 -3.671875q0 -2.453125 1.25 -3.796875q1.265625 -1.34375 3.265625 -1.34375q1.9375 0 3.15625 1.328125q1.234375 1.3125 1.234375 3.703125q0 0.15625 0 0.4375l-7.21875 0q0.09375 1.59375 0.90625 2.453125q0.8125 0.84375 2.015625 0.84375q0.90625 0 1.546875 -0.46875q0.640625 -0.484375 1.015625 -1.515625zm-5.390625 -2.65625l5.40625 0q-0.109375 -1.21875 -0.625 -1.828125q-0.78125 -0.953125 -2.03125 -0.953125q-1.125 0 -1.90625 0.765625q-0.765625 0.75 -0.84375 2.015625zm15.406967 5.765625l0 -1.21875q-0.90625 1.4375 -2.703125 1.4375q-1.15625 0 -2.125 -0.640625q-0.96875 -0.640625 -1.5 -1.78125q-0.53125 -1.140625 -0.53125 -2.625q0 -1.453125 0.484375 -2.625q0.484375 -1.1875 1.4375 -1.8125q0.96875 -0.625 2.171875 -0.625q0.875 0 1.546875 0.375q0.6875 0.359375 1.109375 0.953125l0 -4.796875l1.640625 0l0 13.359375l-1.53125 0zm-5.171875 -4.828125q0 1.859375 0.78125 2.78125q0.78125 0.921875 1.84375 0.921875q1.078125 0 1.828125 -0.875q0.75 -0.890625 0.75 -2.6875q0 -1.984375 -0.765625 -2.90625q-0.765625 -0.9375 -1.890625 -0.9375q-1.078125 0 -1.8125 0.890625q-0.734375 0.890625 -0.734375 2.8125z" fill-rule="nonzero"/><path fill="#ffffff" d="m175.95013 250.09186l0 0c0 -24.300522 21.546738 -44.0 48.125977 -44.0l0 0c26.579254 0 48.125977 19.699478 48.125977 44.0l0 0c0 24.300537 -21.546722 44.0 -48.125977 44.0l0 0c-26.579239 0 -48.125977 -19.699463 -48.125977 -44.0z" fill-rule="evenodd"/><path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m175.95013 250.09186l0 0c0 -24.300522 21.546738 -44.0 48.125977 -44.0l0 0c26.579254 0 48.125977 19.699478 48.125977 44.0l0 0c0 24.300537 -21.546722 44.0 -48.125977 44.0l0 0c-26.579239 0 -48.125977 -19.699463 -48.125977 -44.0z" fill-rule="evenodd"/><path fill="#000000" d="m205.31549 257.01187l-2.96875 -9.67189l1.703125 0l1.53125 5.578125l0.578125 2.078125q0.046875 -0.15625 0.5 -2.0l1.546875 -5.65625l1.6875 0l1.4375 5.609375l0.484375 1.84375l0.5625 -1.859375l1.65625 -5.59375l1.59375 0l-3.03125 9.67189l-1.703125 0l-1.53125 -5.7968903l-0.375 -1.640625l-1.953125 7.4375153l-1.71875 0zm11.691696 0l0 -13.35939l1.640625 0l0 4.796875q1.140625 -1.328125 2.890625 -1.328125q1.078125 0 1.859375 0.421875q0.796875 0.421875 1.140625 1.171875q0.34375 0.75 0.34375 2.171875l0 6.1250153l-1.640625 0l0 -6.1250153q0 -1.234375 -0.53125 -1.796875q-0.53125 -0.5625 -1.515625 -0.5625q-0.71875 0 -1.359375 0.390625q-0.640625 0.375 -0.921875 1.015625q-0.265625 0.640625 -0.265625 1.78125l0 5.2968903l-1.640625 0zm10.375717 -11.468765l0 -1.890625l1.640625 0l0 1.890625l-1.640625 0zm0 11.468765l0 -9.67189l1.640625 0l0 9.67189l-1.640625 0zm7.722946 -1.4687653l0.234375 1.4531403q-0.6875 0.140625 -1.234375 0.140625q-0.890625 0 -1.390625 -0.28125q-0.484375 -0.28125 -0.6875 -0.734375q-0.203125 -0.46876526 -0.203125 -1.9375153l0 -5.578125l-1.203125 0l0 -1.265625l1.203125 0l0 -2.390625l1.625 -0.984375l0 3.375l1.65625 0l0 1.265625l-1.65625 0l0 5.671875q0 0.6875 0.078125 0.890625q0.09375 0.203125 0.28125 0.328125q0.203125 0.109375 0.578125 0.109375q0.265625 0 0.71875 -0.0625zm8.230179 -1.640625l1.6875 0.203125q-0.40625 1.484375 -1.484375 2.3125153q-1.078125 0.8125 -2.765625 0.8125q-2.125 0 -3.375 -1.2968903q-1.234375 -1.3125 -1.234375 -3.671875q0 -2.453125 1.25 -3.796875q1.265625 -1.34375 3.265625 -1.34375q1.9375 0 3.15625 1.328125q1.234375 1.3125 1.234375 3.703125q0 0.15625 0 0.4375l-7.21875 0q0.09375 1.59375 0.90625 2.453125q0.8125 0.84375 2.015625 0.84375q0.90625 0 1.546875 -0.46875q0.640625 -0.484375 1.015625 -1.515625zm-5.390625 -2.65625l5.40625 0q-0.109375 -1.21875 -0.625 -1.828125q-0.78125 -0.953125 -2.03125 -0.953125q-1.125 0 -1.90625 0.765625q-0.765625 0.75 -0.84375 2.015625z" fill-rule="nonzero"/><a xlink:href="https://www.google.com/url?q=https://www.marinebio.net/marinescience/06future/abspdiv.htm&amp;sa=D&amp;source=editors&amp;ust=1619571774228000&amp;usg=AOvVaw1-mPIq_mYl3Q_XCEhg4lKH" target="_blank" rel="noreferrer"><path fill="transparent" fill-opacity="0" d="m175.95013 250.09186l0 0c0 -24.300522 21.546738 -44.0 48.125977 -44.0l0 0c26.579254 0 48.125977 19.699478 48.125977 44.0l0 0c0 24.300537 -21.546722 44.0 -48.125977 44.0l0 0c-26.579239 0 -48.125977 -19.699463 -48.125977 -44.0z" fill-rule="evenodd"/></a><a xlink:href="https://www.google.com/url?q=https://www.marinebio.net/marinescience/06future/abspdiv.htm&amp;sa=D&amp;source=editors&amp;ust=1619571774228000&amp;usg=AOvVaw1-mPIq_mYl3Q_XCEhg4lKH" target="_blank" rel="noreferrer"><path fill="transparent" fill-opacity="0" d="m175.95013 249.59186l0 0l0 0l0 0.5l-0.5 0c0 -24.617905 21.81372 -44.5 48.625977 -44.5l0 0.5l0 0.5l0 0l0 -0.5l0 -0.5c26.812271 0 48.625977 19.882095 48.625977 44.5l-0.5 0l0 -0.5l0 0c0.27615356 0 0.5 0.2238617 0.5 0.5l0 0c0 24.61792 -21.813705 44.5 -48.625977 44.5l0 -0.5l0 -0.5l0 0l0 0.5l0 0.5c-26.812256 0 -48.625977 -19.88208 -48.625977 -44.5c0 -0.2761383 0.2238617 -0.5 0.5 -0.5l0 0m0 1.0l0 -0.5l0.5 0c0 23.983154 21.279755 43.5 47.625977 43.5c0.27615356 0 0.5 0.22387695 0.5 0.5c0 0.27615356 -0.22384644 0.5 -0.5 0.5l0 0l0 0c-0.2761383 0 -0.5 -0.22384644 -0.5 -0.5c0 -0.27612305 0.2238617 -0.5 0.5 -0.5l0 0c26.346237 0 47.625977 -19.516846 47.625977 -43.5l0.5 0l0 0.5l0 0c-0.27612305 0 -0.5 -0.22384644 -0.5 -0.5l0 0c0 -23.983139 -21.27974 -43.5 -47.625977 -43.5c-0.2761383 0 -0.5 -0.22384644 -0.5 -0.5c0 -0.2761383 0.2238617 -0.5 0.5 -0.5l0 0l0 0c0.27615356 0 0.5 0.2238617 0.5 0.5c0 0.27615356 -0.22384644 0.5 -0.5 0.5l0 0c-26.346222 0 -47.625977 19.516861 -47.625977 43.5c0 0.27615356 -0.2238617 0.5 -0.5 0.5l0 0l0 0z" fill-rule="nonzero"/></a><path fill="#cfe2f3" d="m96.05774 41.732285l81.11812 -31.811024l81.11812 31.811024l-81.11812 31.81102z" fill-rule="evenodd"/><path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m96.05774 41.732285l81.11812 -31.811024l81.11812 31.811024l-81.11812 31.81102z" fill-rule="evenodd"/><path fill="#000000" d="m164.9645 31.80853l0 -1.53125l8.84375 -3.734375l0 1.640625l-7.015625 2.875l7.015625 2.906252l0 1.625l-8.84375 -3.781252zm15.843887 2.343752l1.71875 -0.140625q0.1875 1.25 0.875 1.890625q0.703125 0.625 1.6875 0.625q1.1875 0 2.0 -0.890625q0.828125 -0.890625 0.828125 -2.359375q0 -1.4062519 -0.796875 -2.218752q-0.78125 -0.8125 -2.0625 -0.8125q-0.78125 0 -1.421875 0.359375q-0.640625 0.359375 -1.0 0.9375l-1.546875 -0.203125l1.296875 -6.859375l6.640625 0l0 1.5625l-5.328125 0l-0.71875 3.59375q1.203125 -0.84375 2.515625 -0.84375q1.75 0 2.953125 1.21875q1.203125 1.203125 1.203125 3.109377q0 1.8125 -1.046875 3.140625q-1.296875 1.625 -3.515625 1.625q-1.8125 0 -2.96875 -1.015625q-1.15625 -1.03125 -1.3125 -2.71875z" fill-rule="nonzero"/><path fill="#000000" d="m156.11018 59.65228l0 -13.359375l1.640625 0l0 4.796875q1.140625 -1.328125 2.890625 -1.328125q1.078125 0 1.859375 0.421875q0.796875 0.421875 1.140625 1.171875q0.34375 0.75 0.34375 2.171875l0 6.125l-1.640625 0l0 -6.125q0 -1.234375 -0.53125 -1.796875q-0.53125 -0.5625 -1.515625 -0.5625q-0.71875 0 -1.359375 0.390625q-0.640625 0.375 -0.921875 1.015625q-0.265625 0.640625 -0.265625 1.78125l0 5.296875l-1.640625 0zm9.766342 -4.84375q0 -2.6875 1.484375 -3.96875q1.25 -1.078125 3.046875 -1.078125q2.0 0 3.265625 1.3125q1.265625 1.296875 1.265625 3.609375q0 1.859375 -0.5625 2.9375q-0.5625 1.0625 -1.640625 1.65625q-1.0625 0.59375 -2.328125 0.59375q-2.03125 0 -3.28125 -1.296875q-1.25 -1.3125 -1.25 -3.765625zm1.6875 0q0 1.859375 0.796875 2.796875q0.8125 0.921875 2.046875 0.921875q1.21875 0 2.03125 -0.921875q0.8125 -0.9375 0.8125 -2.84375q0 -1.796875 -0.8125 -2.71875q-0.8125 -0.921875 -2.03125 -0.921875q-1.234375 0 -2.046875 0.921875q-0.796875 0.90625 -0.796875 2.765625zm9.250717 4.84375l0 -13.359375l1.640625 0l0 13.359375l-1.640625 0zm10.816696 -3.109375l1.6875 0.203125q-0.40625 1.484375 -1.484375 2.3125q-1.078125 0.8125 -2.765625 0.8125q-2.125 0 -3.375 -1.296875q-1.234375 -1.3125 -1.234375 -3.671875q0 -2.453125 1.25 -3.796875q1.265625 -1.34375 3.265625 -1.34375q1.9375 0 3.15625 1.328125q1.234375 1.3125 1.234375 3.703125q0 0.15625 0 0.4375l-7.21875 0q0.09375 1.59375 0.90625 2.453125q0.8125 0.84375 2.015625 0.84375q0.90625 0 1.546875 -0.46875q0.640625 -0.484375 1.015625 -1.515625zm-5.390625 -2.65625l5.40625 0q-0.109375 -1.21875 -0.625 -1.828125q-0.78125 -0.953125 -2.03125 -0.953125q-1.125 0 -1.90625 0.765625q-0.765625 0.75 -0.84375 2.015625zm8.485092 2.875l1.625 -0.25q0.125 0.96875 0.75 1.5q0.625 0.515625 1.75 0.515625q1.125 0 1.671875 -0.453125q0.546875 -0.46875 0.546875 -1.09375q0 -0.546875 -0.484375 -0.875q-0.328125 -0.21875 -1.671875 -0.546875q-1.8125 -0.46875 -2.515625 -0.796875q-0.6875 -0.328125 -1.046875 -0.90625q-0.359375 -0.59375 -0.359375 -1.3125q0 -0.640625 0.296875 -1.1875q0.296875 -0.5625 0.8125 -0.921875q0.375 -0.28125 1.03125 -0.46875q0.671875 -0.203125 1.421875 -0.203125q1.140625 0 2.0 0.328125q0.859375 0.328125 1.265625 0.890625q0.421875 0.5625 0.578125 1.5l-1.609375 0.21875q-0.109375 -0.75 -0.640625 -1.171875q-0.515625 -0.421875 -1.46875 -0.421875q-1.140625 0 -1.625 0.375q-0.46875 0.375 -0.46875 0.875q0 0.3125 0.1875 0.578125q0.203125 0.265625 0.640625 0.4375q0.234375 0.09375 1.4375 0.421875q1.75 0.453125 2.4375 0.75q0.6875 0.296875 1.078125 0.859375q0.390625 0.5625 0.390625 1.40625q0 0.828125 -0.484375 1.546875q-0.46875 0.71875 -1.375 1.125q-0.90625 0.390625 -2.046875 0.390625q-1.875 0 -2.875 -0.78125q-0.984375 -0.78125 -1.25 -2.328125z" fill-rule="nonzero"/><path fill="#cfe2f3" d="m96.05774 108.81102l60.094498 0l0 44.346466l-60.094498 0z" fill-rule="evenodd"/><path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m96.05774 108.81102l60.094498 0l0 44.346466l-60.094498 0z" fill-rule="evenodd"/><path fill="#000000" d="m110.260864 137.90425l0 -5.65625l-5.15625 -7.703125l2.15625 0l2.640625 4.03125q0.71875 1.125 1.34375 2.265625q0.609375 -1.046875 1.46875 -2.359375l2.578125 -3.9375l2.0625 0l-5.328125 7.703125l0 5.65625l-1.765625 0zm13.386276 -3.109375l1.6875 0.203125q-0.40625 1.484375 -1.484375 2.3125q-1.078125 0.8125 -2.765625 0.8125q-2.125 0 -3.375 -1.296875q-1.234375 -1.3125 -1.234375 -3.671875q0 -2.453125 1.25 -3.796875q1.265625 -1.34375 3.265625 -1.34375q1.9375 0 3.15625 1.328125q1.234375 1.3125 1.234375 3.703125q0 0.15625 0 0.4375l-7.21875 0q0.09375 1.59375 0.90625 2.453125q0.8125 0.84375 2.015625 0.84375q0.90625 0 1.546875 -0.46875q0.640625 -0.484375 1.015625 -1.515625zm-5.390625 -2.65625l5.40625 0q-0.109375 -1.21875 -0.625 -1.828125q-0.78125 -0.953125 -2.03125 -0.953125q-1.125 0 -1.90625 0.765625q-0.765625 0.75 -0.84375 2.015625zm8.485092 2.875l1.625 -0.25q0.125 0.96875 0.75 1.5q0.625 0.515625 1.75 0.515625q1.125 0 1.671875 -0.453125q0.546875 -0.46875 0.546875 -1.09375q0 -0.546875 -0.484375 -0.875q-0.328125 -0.21875 -1.671875 -0.546875q-1.8125 -0.46875 -2.515625 -0.796875q-0.6875 -0.328125 -1.046875 -0.90625q-0.359375 -0.59375 -0.359375 -1.3125q0 -0.640625 0.296875 -1.1875q0.296875 -0.5625 0.8125 -0.921875q0.375 -0.28125 1.03125 -0.46875q0.671875 -0.203125 1.421875 -0.203125q1.140625 0 2.0 0.328125q0.859375 0.328125 1.265625 0.890625q0.421875 0.5625 0.578125 1.5l-1.609375 0.21875q-0.109375 -0.75 -0.640625 -1.171875q-0.515625 -0.421875 -1.46875 -0.421875q-1.140625 0 -1.625 0.375q-0.46875 0.375 -0.46875 0.875q0 0.3125 0.1875 0.578125q0.203125 0.265625 0.640625 0.4375q0.234375 0.09375 1.4375 0.421875q1.75 0.453125 2.4375 0.75q0.6875 0.296875 1.078125 0.859375q0.390625 0.5625 0.390625 1.40625q0 0.828125 -0.484375 1.546875q-0.46875 0.71875 -1.375 1.125q-0.90625 0.390625 -2.046875 0.390625q-1.875 0 -2.875 -0.78125q-0.984375 -0.78125 -1.25 -2.328125z" fill-rule="nonzero"/><path fill="#cfe2f3" d="m194.02887 108.81102l60.094482 0l0 44.346466l-60.094482 0z" fill-rule="evenodd"/><path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m194.02887 108.81102l60.094482 0l0 44.346466l-60.094482 0z" fill-rule="evenodd"/><path fill="#000000" d="m204.45074 137.90425l0 -13.359375l1.8125 0l7.015625 10.484375l0 -10.484375l1.6875 0l0 13.359375l-1.8125 0l-7.015625 -10.5l0 10.5l-1.6875 0zm12.676071 -4.84375q0 -2.6875 1.484375 -3.96875q1.25 -1.078125 3.046875 -1.078125q2.0 0 3.265625 1.3125q1.265625 1.296875 1.265625 3.609375q0 1.859375 -0.5625 2.9375q-0.5625 1.0625 -1.640625 1.65625q-1.0625 0.59375 -2.328125 0.59375q-2.03125 0 -3.28125 -1.296875q-1.25 -1.3125 -1.25 -3.765625zm1.6875 0q0 1.859375 0.796875 2.796875q0.8125 0.921875 2.046875 0.921875q1.21875 0 2.03125 -0.921875q0.8125 -0.9375 0.8125 -2.84375q0 -1.796875 -0.8125 -2.71875q-0.8125 -0.921875 -2.03125 -0.921875q-1.234375 0 -2.046875 0.921875q-0.796875 0.90625 -0.796875 2.765625z" fill-rule="nonzero"/></g>
+</svg>
+
+
+<p>Copyright &copy; Ecoquants, National Marine Sanctuary Foundation, NOAA Channel Islands National Marine Sanctuary. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
