@@ -7,7 +7,7 @@ navbar:
       href: index.html
     - text: "Submit Observation"
       icon: fa-paper-plane
-      href: ./submit.html
+      href: https://forms.gle/7ES7mD9mbVvvCtKX9
     - text: "Abalone ID Key"
       icon: fa-key
       href: key.html
@@ -19,8 +19,13 @@ navbar:
       href: about.html
 output_dir: '.'
 output:
-  html_document:  
+  html_document:
+    # to avoid: [navbar-right flex css · Issue #316 · rstudio/flexdashboard](https://github.com/rstudio/flexdashboard/issues/316)
+    #   get latest: devtools::install_github("rstudio/bslib")
+    theme:
+      version: 4
+      bootswatch: cerulean
     include: 
       after_body: footer.html
-    css: style.css  
+    css: styles.css  
   

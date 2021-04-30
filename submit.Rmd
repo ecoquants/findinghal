@@ -8,8 +8,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Please share your observation of white abalone by filling out the:
 
-- [**Submit Form**](https://forms.gle/7ES7mD9mbVvvCtKX9){target="_blank"}
+<a class="btn btn-primary" href="https://forms.gle/7ES7mD9mbVvvCtKX9" target="_blank">Submit survey</a>
 
 Thank you for participating!
 
-![Photo Credit: Kat Magaña/BML](/Users/PikesStuff/github/findinghal/images/white_ab_adult_Kat_Magana.png)
+![Photo Credit: Kat Magaña/BML](./images/white_ab_adult_Kat_Magana.png)
