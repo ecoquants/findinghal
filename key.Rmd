@@ -7,11 +7,17 @@ output: html_document
 knitr::opts_chunk$set(echo = F)
 ```
 
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
 <!--
 Edit here:
 * [key - Google Drawings](https://docs.google.com/drawings/d/17QfEmTxZMHnKHZsaBnFm4ejCXw2eZ4xi897xIzPGx7g/edit)
 Then File > Download > svg to images/key.svg
 -->
+
+#### `r fa(name = "stop-circle", fill = "red")` <span style='color:#ff0000; font-size:100%; font-weight:600'> We're still working on designing this key. Please check back soon for updates! </span>
+
 
 ```{r, results="asis", warning=F}
 cat(readLines("images/key.svg"))

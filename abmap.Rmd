@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## {.tabset}
 
 ### Distribution of Abalone in the North Pacific
-![Distribution of the eight abalone species endemic to the North Pacific](/Users/PikesStuff/github/findinghal/images/abmapnew.jpg)
+![Distribution of the eight abalone species endemic to the North Pacific. Note that pinto and threaded are now considered the same species but with a northern and southern shell form that integrates in the area of Central California between the ranges shown in this map. (Map from NASA, ranges added by Genny Anderson indicating each species' general concentration, not full range). Source: Julie Bursek/CINMS?](./images/Ab_dist.jpg)
 
 ### Known sitings of white abalone
-![Known sitings of white abalone in California and Baja California](/Users/PikesStuff/github/findinghal/images/sore-map.gif)
+![Known sitings of white abalone in California and Baja California. Circles indicate specimen records, squares indicate literature record, questions marks show a dubious record. Dots in red are new records not published in Geiger (2000), dots in green are from the Australian Museum, Sydney. Source: Daniel Geiger](./images/sore-map.gif)
