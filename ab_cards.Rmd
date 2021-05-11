@@ -1,0 +1,24 @@
+---
+title: "Abalone Identification Cards"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+<div class="card-group">
+  
+  <div class="card text-center bg-light">>
+    <img class="card-img-top" src="./images/OP_WA_F.jpg" alt="Card image">
+    <img class="card-img-bottom" src="./images/OP_WA_B.jpg" alt="Card image"/>
+     <a href="http://www.orianapoindexter.com/id-guides" class="btn btn-primary">Source: Orianna Poindexter</a>
+    </div>
+      <div class="card text-center bg-dark">>
+    <img class="card-img-top" src="./images/OP_BA_F.jpg" alt="Card image">
+    <img class="card-img-bottom" src="./images/OP_BA_B.jpg" alt="Card image"/>
+     <a href="http://www.orianapoindexter.com/id-guides" class="btn btn-primary">Source: Orianna Poindexter</a>
+    </div>
+  
+  </div>
