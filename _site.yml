@@ -11,9 +11,9 @@ navbar:
     - text: "Resources"
       icon: fa-bookmark
       href: resources.html
-    - text: "Abalone ID Key"
+    - text: "Abalone ID Cards"
       icon: fa-key
-      href: key.html
+      href: ab_cards.html
     - text: "Abalone Map" 
       icon: fa-map
       href: abmap.html
