@@ -11,7 +11,8 @@ Going diving? See how you can help identify and record observations of living wh
 
 Want to learn more about these marine snails? Please see the corresponding tabs above for more information. 
 
-### Already gone diving? 
+### Already gone diving? {#submit}
+
 Please submit your abalone field survey here: <a class="btn btn-primary fa fa-paper-plane"  href="https://forms.gle/7ES7mD9mbVvvCtKX9" target="_blank"> Submit survey</a>
 
 

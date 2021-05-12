@@ -7,7 +7,7 @@ navbar:
       href: index.html
     - text: "Submit an Observation"
       icon: fa-paper-plane
-      href: https://forms.gle/7ES7mD9mbVvvCtKX9
+      href: "index.html#submit"
     - text: "Resources"
       icon: fa-bookmark
       href: resources.html
