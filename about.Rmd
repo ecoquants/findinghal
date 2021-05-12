@@ -1,8 +1,14 @@
 ---
-title: "About these abalone"
+title: "About Hal"
 output: html_document
 ---
 
 White abalone (*Haliotus sorenseni*) belongs to a group of plant-eating marine snails that were once common in California. They once numbered in the millions off the California coast, but now they are endangered. In 2001 white abalone became the first ever marine invertebrate to be Listed as endangered under the [Endangered Species Act](https://www.fisheries.noaa.gov/topic/laws-policies#endangered-species-act). White abalone are one of [NOAA Fisheries' Species in the Spotlight](https://www.fisheries.noaa.gov/species/white-abalone/spotlight)—an initiative that includes animals considered most at risk for extinction and prioritizes their recovery efforts. Source: [NOAA Fisheries](https://www.fisheries.noaa.gov/species/white-abalone#overview)
+
+
+Finding Hal is part of the Wanted Alive! White Abalone campaign, in conjunction with partners at [NOAA Channel Islands National Marine Sanctuary](http://channelislands.noaa.gov/), [NOAA Fisheries Office of Protected Resources](https://www.fisheries.noaa.gov/about/office-protected-resources), the [National Marine Sanctuary Foundation](https://marinesanctuary.org/), and [Ecoquants](https://ecoquants.com/). 
+
+We need **your** help to locate living white abalone in and around the Southern California Bight. On your next dive, be sure to bring a camera and keep a lookout for these cryptic gastropods! After your dive, if you think you might have found one, be sure to [Submit](index.html#submit) your field survey!
+
 
 ![Source: Kat Magaña/CDFW](./images/white_ab_adult_Kat_Magana.png){width=50%}

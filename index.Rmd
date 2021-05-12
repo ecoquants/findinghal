@@ -5,11 +5,13 @@ output: html_document
 
 ## Calling all divers! 
 We need your help to find living
-white abalone (*Haliotis sorenseni*) in and around the Southern California Bight! This species is on the brink of extinction, but **your** field observations may help us restore populations to stable levels. In order to succesfully ouplant captive broodstock abalone in the wild, we need to first find living individuals *in situ* to ensure the efficacy of restoration efforts. 
+white abalone (*Haliotis sorenseni*) in and around the Southern California Bight! 
 
-Going diving? See how you can help identify and record observations of living white abalone! Visit our [Resources](Resources.html) page for more information.
+Want to learn more about abalone? Visit our [About](about.html) page for more information.
 
-Want to learn more about these marine snails? Please see the corresponding tabs above for more information. 
+White abalone are on the brink of extinction, but **your** field observations may help us restore populations to stable levels. In order to successfully ouplant captive broodstock abalone in the wild, we need to first find living individuals *in situ* to ensure the efficacy of restoration efforts. 
+
+Going diving? See how you can help identify and record observations of living white abalone! Visit our [Resources](resources.html) page for more information.
 
 ### Already gone diving? {#submit}
 
