@@ -8,7 +8,7 @@ navbar:
     - text: "Submit an Observation"
       icon: fa-paper-plane
       href: "index.html#submit"
-    - text: "Pre-dive Resources"
+    - text: "Resources"
       icon: fa-bookmark
       href: resources.html
     - text: "Abalone ID Cards"

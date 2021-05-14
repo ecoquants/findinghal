@@ -1,5 +1,5 @@
 ---
-title: "Pre-dive Resources"
+title: "Resources"
 output: html_document
 ---
 
@@ -14,12 +14,15 @@ library(fontawesome)
 # `r fa(name = "swimmer")`<span style='color:#000000; font-size:75%'> Going diving? </span>
 Here's how you can help positively ID white abalone!
 
+## {.tabset}
+
+### Wanted Alive Poster
 ![](./images/ab_poster.png)
 
-## {.tabset}
-### *To be determined* Please check back soon!
+### SCUBA-Related Resources
 
-- [Some pdf](./files/BOEM-2021-0029.pdf){target="_blank"}
-- [Some jpg](./images/boards.jpg){target="_blank"}
+![Compartive images of the five subtidal abalone species found in the Southern California Bight](./images/compartive_id.png)
 
-### Key Terminology
+
+- [Click here to access the comperative field ID card](./images/Abalone-id-cards_5x8.pdf){target="_blank"}
+
