@@ -1,21 +1,21 @@
 ---
-title: "Finding Hal"
+title: "Calling all divers!"
 output: html_document
 ---
 
-## Calling all divers! 
-We need your help to find living
-white abalone (*Haliotis sorenseni*) in and around the Southern California Bight! 
+We need your help to **find HAL**, endangered
+white abalone in the genus "*Haliotis*" in and around the Southern California Bight (Point Conception to Ensenada).
 
-Want to learn more about abalone? Visit our [About](about.html) page for more information.
+White abalone (*Haliotis sorenseni*) are on the brink of extinction, **your** observations could contribute to the conservation of this endangered species.
 
-White abalone are on the brink of extinction, **your** observations could contribute to the conservation of this endangered species in the Southern California Bight.
+Use our [ID cards](cards.html) to see different abalone species, and help us positively ID white abalone. 
 
-Going diving? See how you can help identify and record observations of living white abalone! Visit our [Resources](resources.html) page for more information.
+Going diving? Be sure to visit our [Resources](resources.html) page for more SCUBA-related abalone ID and best practices.Want to learn more about these marine snails? Visit our [About](about.html) page for more information, or visit NOAA Fisheries to find out [why you should care about white abalone](https://www.fisheries.noaa.gov/feature-story/white-abalone-why-you-should-care-about-critter). 
+
 
 ### Already gone diving? {#submit}
 
-Please submit your abalone field survey here: <a class="btn btn-primary fa fa-paper-plane"  href="https://forms.gle/7ES7mD9mbVvvCtKX9" target="_blank"> Submit survey</a>
+Please submit your abalone field survey here: <center> <a class="btn btn-primary fa fa-paper-plane"  href="https://forms.gle/7ES7mD9mbVvvCtKX9" target="_blank"> Submit survey</a>
 
 
 <center>
