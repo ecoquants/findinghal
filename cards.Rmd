@@ -12,5 +12,5 @@ Please  enjoy these unique abalone ID cards created by [Oriana Poindexter](http:
  <a class="btn btn-primary fa fa-question-circle"  href="glossary.html" target="_blank"> Glossary of key terms</a>
 
 ```{r cards}
-htmltools::includeHTML("_abcards.html")
+htmltools::includeHTML("_cards.html")
 ```

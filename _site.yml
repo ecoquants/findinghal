@@ -13,7 +13,7 @@ navbar:
       href: resources.html
     - text: "Abalone ID Cards"
       icon: fa-key
-      href: id_cards.html
+      href: cards.html
     - text: "Abalone Map" 
       icon: fa-map
       href: map.html
