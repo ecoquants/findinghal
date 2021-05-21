@@ -1,7 +1,11 @@
 ---
-title: "Calling all divers!"
+title: ""
 output: html_document
 ---
+![](./images/banner.jpg)
+
+
+### Calling all divers!
 
 We need your help to **find HAL**, endangered
 white abalone in the genus "*Haliotis*" in and around the Southern California Bight (Point Conception to Ensenada).

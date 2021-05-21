@@ -1,3 +1,6 @@
 ﻿title,subtitle,img,pdf,btn_bkgrnd_color,btn_font_color
 Black Abalone,Haliotis cracherdoii,./images/OP_BA_F.jpg,./images/ID_cards/ID Guide_Black_05172021.pdf,#343a40,#fff
-Green Abalone,Haliotis fulgens,./images/OP_GA_F.jpg,./images/ID_cards/ID Guide_Green_05172021.pdf,#73a839,#000
+Green Abalone,Haliotis fulgens,./images/OP_GA_F.jpg,./images/ID_cards/ID Guide_Green_05172021.pdf,#73a839,#fff
+Pink Abalone,Haliotis corrugata,./images/OP_PA_F.jpg,./images/ID_cards/ID Guide_Pink_05172021.pdf,#806961,#fff
+Red Abalone,Haliotis rufescens,./images/OP_RA_F.jpg,./images/ID_cards/ID Guide_Red_05172021.pdf,#763f37,#fff
+White Abalone,Haliotis sorenseni,./images/OP_WA_F.jpg,./images/ID_cards/ID Guide_White_05172021.pdf,#efd8b4,#000
