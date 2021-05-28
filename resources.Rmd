@@ -14,12 +14,13 @@ library(fontawesome)
 # `r fa(name = "swimmer")`<span style='color:#000000; font-size:75%'> Going diving? </span>
 Here's how you can help positively ID white abalone!
 
-## {.tabset}
+## {.tabset .tabset-dropdown}
 
-### Wanted Alive Poster {#poster}
+### Wanted Alive Poster
+
 ![](./images/ab_poster.png)
 
-### SCUBA-Related Resources {#diveresources}
+### SCUBA-Related Resources
 
 ![Compartive images of the five subtidal abalone species found in the Southern California Bight](./images/compartive_id.png) 
 

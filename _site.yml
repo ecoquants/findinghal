@@ -10,11 +10,7 @@ navbar:
       href: "index.html#submit"
     - text: "Resources"
       icon: fa-bookmark
-      menu:
-      - text: Informational Poster  
-        href: "resources.html#poster"
-      - text: SCUBA Resources
-        href: "resources.html#diveresources"
+      href: "resources.html"
     - text: "Abalone ID Cards"
       icon: fa-key
       href: cards.html
