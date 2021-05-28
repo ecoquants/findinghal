@@ -16,12 +16,12 @@ Here's how you can help positively ID white abalone!
 
 ## {.tabset}
 
-### Wanted Alive Poster
+### Wanted Alive Poster {#poster}
 ![](./images/ab_poster.png)
 
-### SCUBA-Related Resources
+### SCUBA-Related Resources {#diveresources}
 
-![Compartive images of the five subtidal abalone species found in the Southern California Bight](./images/compartive_id.png)
+![Compartive images of the five subtidal abalone species found in the Southern California Bight](./images/compartive_id.png) 
 
 
 - [Click here to access the comperative field ID card](./images/Abalone-id-cards_5x8.pdf){target="_blank"}

@@ -247,12 +247,22 @@ $(document).ready(function () {
     Submit an Observation
   </a>
 </li>
-<li>
-  <a href="resources.html">
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fas fa-bookmark"></span>
      
     Resources
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="resources.html#poster">Informational Poster</a>
+    </li>
+    <li>
+      <a href="resources.html#diveresources">SCUBA Resources</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="cards.html">
@@ -297,11 +307,11 @@ $(document).ready(function () {
 <p>Here’s how you can help positively ID white abalone!</p>
 <div id="section" class="section level2 tabset">
 <h2></h2>
-<div id="wanted-alive-poster" class="section level3">
+<div id="poster" class="section level3">
 <h3>Wanted Alive Poster</h3>
 <p><img src="images/ab_poster.png" /></p>
 </div>
-<div id="scuba-related-resources" class="section level3">
+<div id="diveresources" class="section level3">
 <h3>SCUBA-Related Resources</h3>
 <div class="figure">
 <img src="images/compartive_id.png" alt="" />
