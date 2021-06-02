@@ -19,11 +19,14 @@ Going diving? Be sure to visit our [Resources](resources.html) page for more SCU
 
 ### Already gone diving? {#submit}
 
-Please submit your abalone field survey here: <center> <a class="btn btn-primary fa fa-paper-plane"  href="https://forms.gle/7ES7mD9mbVvvCtKX9" target="_blank"> Submit survey</a>
+Please submit your abalone field survey here: 
+<a
+class="btn btn-primary fa fa-paper-plane"
+href="https://forms.gle/7ES7mD9mbVvvCtKX9" target="_blank"> Submit survey</a>
 
-
-<center>
+*Note: No information will be shared publicly; media will only be used to identify white abalone.*
 
 ![A wild white abalone (*H. sorenseni*) seen in the field in its preferred habitat. Source: Athena Maguire/CDFW](./images/wild_white.jpg){width=75%}
 
-<center>
+
+As part of the *Wanted Alive! White Abalone* campaign, Finding Hal sponsored and funded by the [National Marine Sanctuary Foundation](https://marinesanctuary.org/), implemented through [Ecoquants](https://ecoquants.com/). Partners involved with the campaign (but not hosting this web portal) include the [NOAA Channel Islands National Marine Sanctuary](http://channelislands.noaa.gov/) and [NOAA Fisheries Office of Protected Resources](https://www.fisheries.noaa.gov/about/office-protected-resources).
