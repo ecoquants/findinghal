@@ -1,0 +1,16 @@
+---
+title: "HAL's Shells"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
+```
+
+Please enjoy these preserved abalone ID shells curated by the [Santa Barbara Museum of Natural History](https://www.sbnature.org/){target="_blank"}. 
+
+Each species's has two sets of shell images, a ventral ("bottom") view and a dorsal ("top") view. These images were graciously provided by Vanessa Delnavaz, Santa Barbara Museum of Natural History
+
+
+
+

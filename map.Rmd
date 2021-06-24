@@ -4,11 +4,13 @@ output: html_document
 ---
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
 ```
 
-## {.tabset}
+`r fa(name = "hand-point-down")` Click on the dropdown below to see a map of known white abalone sightings, and the distribution of abalone species in the North Pacific
+
+## {.tabset .tabset-dropdown}
 
 ### Known sightings of white abalone
 ![Known sightings of white abalone in California and Baja California. Circles indicate specimen records, squares indicate literature record, questions marks show a dubious record. Dots in red are new records not published in Geiger (2000), dots in green are from the Australian Museum, Sydney. Source: Daniel Geiger](./images/sore-map.gif)
