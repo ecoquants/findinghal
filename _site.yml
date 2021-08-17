@@ -31,6 +31,7 @@ output:
       # see themes at https://bootswatch.com
       bootswatch: cerulean
     include: 
+      in_header: "_google-analytics.html"
       after_body: footer.html
     css: styles.css  
   

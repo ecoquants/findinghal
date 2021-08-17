@@ -1,6 +1,5 @@
 ---
 title: "Locating Hal"
-output: html_document
 ---
 
 

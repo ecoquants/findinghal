@@ -1,6 +1,5 @@
 ---
 title: "HAL's Shells"
-output: html_document
 ---
 
 ```{r setup, include=FALSE}

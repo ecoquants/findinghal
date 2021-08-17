@@ -1,6 +1,7 @@
 ---
-title: ""
-output: html_document
+title: "Finding Hal"
+description: |
+  Let's find Hal, as in *Haliotis sorenseni*, aka white abalone!
 ---
 ![](./images/banner.jpg)
 

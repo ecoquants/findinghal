@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://findinghal.org/about.html</loc>
+    <lastmod>2021-08-17T16:31:31-07:00</lastmod>
+  </url>
+  <url>
+    <loc>https://findinghal.org/cards.html</loc>
+    <lastmod>2021-07-02T08:28:18-07:00</lastmod>
+  </url>
+  <url>
+    <loc>https://findinghal.org/glossary.html</loc>
+    <lastmod>2021-05-20T08:36:05-07:00</lastmod>
+  </url>
+  <url>
+    <loc>https://findinghal.org/</loc>
+    <lastmod>2021-08-17T16:30:33-07:00</lastmod>
+  </url>
+  <url>
+    <loc>https://findinghal.org/key.html</loc>
+    <lastmod>2021-05-12T10:27:40-07:00</lastmod>
+  </url>
+  <url>
+    <loc>https://findinghal.org/map.html</loc>
+    <lastmod>2021-07-02T08:28:18-07:00</lastmod>
+  </url>
+  <url>
+    <loc>https://findinghal.org/resources.html</loc>
+    <lastmod>2021-07-02T08:28:18-07:00</lastmod>
+  </url>
+  <url>
+    <loc>https://findinghal.org/shells.html</loc>
+    <lastmod>2021-07-02T08:28:18-07:00</lastmod>
+  </url>
+  <url>
+    <loc>https://findinghal.org/submit.html</loc>
+    <lastmod>2021-04-30T11:30:44-07:00</lastmod>
+  </url>
+</urlset>
