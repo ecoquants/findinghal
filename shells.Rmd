@@ -11,5 +11,23 @@ Please enjoy these preserved abalone ID shells curated by the [Santa Barbara Mus
 Each species's has two sets of shell images, a ventral ("bottom") view and a dorsal ("top") view. These images were graciously provided by Vanessa Delnavaz, Santa Barbara Museum of Natural History
 
 
+```{r shells}
+librarian::shelf(
+  htmltools, knitr, purrr, readr)
 
+HTML('
+<div class="container-fluid">
+  <div class="px-lg-5">
+    <div class="row">')
+
+read_csv("shells.csv") %>% 
+  pmap(
+    function(...){
+      with(list(...),
+        knit_expand("shells.html"))
+        }) %>% 
+  unlist() %>% 
+  HTML()
+
+```
 

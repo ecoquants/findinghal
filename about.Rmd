@@ -8,6 +8,6 @@ White abalone (*Haliotus sorenseni*) belongs to a group of plant-eating marine s
 As part of the *Wanted Alive! White Abalone* campaign,Finding Hal is sponsored and funded by the [National Marine Sanctuary Foundation](https://marinesanctuary.org/), implemented through [Ecoquants](https://ecoquants.com/). Partners involved with the campaign (but not hosting this web portal) include [NOAA Channel Islands National Marine Sanctuary](http://channelislands.noaa.gov/) and [NOAA Fisheries Office of Protected Resources](https://www.fisheries.noaa.gov/about/office-protected-resources).
 
 
-Questions or commentions about this site? Please reach out to [pike.spector@noaa.gov](pike.spector@noaa.gov)
+Questions or comments about this site? Please reach out to [pike.spector@noaa.gov](pike.spector@noaa.gov)
 
 ![Source: Kat Magaña/CDFW](./images/white_ab_adult_Kat_Magana.png){width=50%}

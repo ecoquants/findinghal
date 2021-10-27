@@ -20,10 +20,10 @@ Going diving? Be sure to visit our [Resources](resources.html) page for more SCU
 
 ### Already gone diving? {#submit}
 
-Please submit your abalone field survey here: 
+Please submit your abalone field observation here: 
 <a
 class="btn btn-primary fa fa-paper-plane"
-href="https://forms.gle/7ES7mD9mbVvvCtKX9" target="_blank"> Submit survey</a>
+href="https://forms.gle/7ES7mD9mbVvvCtKX9" target="_blank"> Submit an observation</a>
 
 *Note: No information will be shared publicly; media will only be used to identify white abalone.*
 
