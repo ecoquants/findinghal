@@ -24,10 +24,9 @@ read_csv("shells.csv") %>%
   pmap(
     function(...){
       with(list(...),
-        knit_expand("shells.html"))
+        knit_expand("_shells.html"))
         }) %>% 
   unlist() %>% 
   HTML()
-
 ```
 
