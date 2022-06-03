@@ -13,20 +13,14 @@ Each species's has two sets of shell images, a ventral ("bottom") view and a dor
 
 ```{r shells}
 librarian::shelf(
-  htmltools, knitr, purrr, readr)
-
-HTML('
-<div class="container-fluid">
-  <div class="px-lg-5">
-    <div class="row">')
-
+  bs4cards, dplyr, htmltools, knitr, purrr, readr)
+  
 read_csv("shells.csv") %>% 
-  pmap(
-    function(...){
-      with(list(...),
-        knit_expand("_shells.html"))
-        }) %>% 
-  unlist() %>% 
-  HTML()
+  arrange(title, side) %>% 
+  cards(
+    title = title,
+    text = subtitle,
+    tags = paste("ALL;", tags),
+    image = img)
 ```
 
