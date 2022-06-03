@@ -8,7 +8,11 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 
 Please enjoy these unique abalone ID cards created by [Oriana Poindexter](http://www.orianapoindexter.com). Each card has a front and back, and can be downloaded to your device as a PDF. 
 
+<<<<<<< HEAD
 To aid in the identification of HAL, please see these [shell images](shells.html){target="_blank"}
+=======
+To aid in the identification of HAL, please see these [shell images](./shells.html){target="_blank"}
+>>>>>>> 7ed1d0234afa9472d1219b5d107bb906407a1999
 provided by the Santa Barbara Museum of Natural History
 
 <center>
