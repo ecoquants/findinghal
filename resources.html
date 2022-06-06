@@ -13,6 +13,7 @@
 
 <title>Resources</title>
 
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
@@ -62,6 +63,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -82,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -234,7 +239,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -303,11 +308,13 @@ $(document).ready(function () {
 
 
 <div id="going-diving" class="section level1">
-<h1><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M189.61 310.58c3.54 3.26 15.27 9.42 34.39 9.42s30.86-6.16 34.39-9.42c16.02-14.77 34.5-22.58 53.46-22.58h16.3c18.96 0 37.45 7.81 53.46 22.58 3.54 3.26 15.27 9.42 34.39 9.42s30.86-6.16 34.39-9.42c14.86-13.71 31.88-21.12 49.39-22.16l-112.84-80.6 18-12.86c3.64-2.58 8.28-3.52 12.62-2.61l100.35 21.53c25.91 5.53 51.44-10.97 57-36.88 5.55-25.92-10.95-51.44-36.88-57L437.68 98.47c-30.73-6.58-63.02.12-88.56 18.38l-80.02 57.17c-10.38 7.39-19.36 16.44-26.72 26.94L173.75 299c5.47 3.23 10.82 6.93 15.86 11.58zM624 352h-16c-26.04 0-45.8-8.42-56.09-17.9-8.9-8.21-19.66-14.1-31.77-14.1h-16.3c-12.11 0-22.87 5.89-31.77 14.1C461.8 343.58 442.04 352 416 352s-45.8-8.42-56.09-17.9c-8.9-8.21-19.66-14.1-31.77-14.1h-16.3c-12.11 0-22.87 5.89-31.77 14.1C269.8 343.58 250.04 352 224 352s-45.8-8.42-56.09-17.9c-8.9-8.21-19.66-14.1-31.77-14.1h-16.3c-12.11 0-22.87 5.89-31.77 14.1C77.8 343.58 58.04 352 32 352H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h16c38.62 0 72.72-12.19 96-31.84 23.28 19.66 57.38 31.84 96 31.84s72.72-12.19 96-31.84c23.28 19.66 57.38 31.84 96 31.84s72.72-12.19 96-31.84c23.28 19.66 57.38 31.84 96 31.84h16c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zm-512-96c44.18 0 80-35.82 80-80s-35.82-80-80-80-80 35.82-80 80 35.82 80 80 80z"/></svg><span style="color:#000000; font-size:75%"> Going diving? </span></h1>
+<h1><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M189.61 310.58c3.54 3.26 15.27 9.42 34.39 9.42s30.86-6.16 34.39-9.42c16.02-14.77 34.5-22.58 53.46-22.58h16.3c18.96 0 37.45 7.81 53.46 22.58 3.54 3.26 15.27 9.42 34.39 9.42s30.86-6.16 34.39-9.42c14.86-13.71 31.88-21.12 49.39-22.16l-112.84-80.6 18-12.86c3.64-2.58 8.28-3.52 12.62-2.61l100.35 21.53c25.91 5.53 51.44-10.97 57-36.88 5.55-25.92-10.95-51.44-36.88-57L437.68 98.47c-30.73-6.58-63.02.12-88.56 18.38l-80.02 57.17c-10.38 7.39-19.36 16.44-26.72 26.94L173.75 299c5.47 3.23 10.82 6.93 15.86 11.58zM624 352h-16c-26.04 0-45.8-8.42-56.09-17.9-8.9-8.21-19.66-14.1-31.77-14.1h-16.3c-12.11 0-22.87 5.89-31.77 14.1C461.8 343.58 442.04 352 416 352s-45.8-8.42-56.09-17.9c-8.9-8.21-19.66-14.1-31.77-14.1h-16.3c-12.11 0-22.87 5.89-31.77 14.1C269.8 343.58 250.04 352 224 352s-45.8-8.42-56.09-17.9c-8.9-8.21-19.66-14.1-31.77-14.1h-16.3c-12.11 0-22.87 5.89-31.77 14.1C77.8 343.58 58.04 352 32 352H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h16c38.62 0 72.72-12.19 96-31.84 23.28 19.66 57.38 31.84 96 31.84s72.72-12.19 96-31.84c23.28 19.66 57.38 31.84 96 31.84s72.72-12.19 96-31.84c23.28 19.66 57.38 31.84 96 31.84h16c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zm-512-96c44.18 0 80-35.82 80-80s-35.82-80-80-80-80 35.82-80 80 35.82 80 80 80z"/></svg><span
+style="color:#000000; font-size:75%"> Going diving? </span></h1>
 <p>Here’s how you can help positively ID white abalone!</p>
-<p><svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M91.826 467.2V317.966c-8.248 5.841-16.558 10.57-24.918 14.153C35.098 345.752-.014 322.222 0 288c.008-18.616 10.897-32.203 29.092-40 28.286-12.122 64.329-78.648 77.323-107.534 7.956-17.857 25.479-28.453 43.845-28.464l.001-.002h171.526c11.812 0 21.897 8.596 23.703 20.269 7.25 46.837 38.483 61.76 38.315 123.731-.007 2.724.195 13.254.195 16 0 50.654-22.122 81.574-71.263 72.6-9.297 18.597-39.486 30.738-62.315 16.45-21.177 24.645-53.896 22.639-70.944 6.299V467.2c0 24.15-20.201 44.8-43.826 44.8-23.283 0-43.826-21.35-43.826-44.8zM112 72V24c0-13.255 10.745-24 24-24h192c13.255 0 24 10.745 24 24v48c0 13.255-10.745 24-24 24H136c-13.255 0-24-10.745-24-24zm212-24c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z"/></svg> Click on the dropdown below to navigate to different resources</p>
+<p><svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M91.826 467.2V317.966c-8.248 5.841-16.558 10.57-24.918 14.153C35.098 345.752-.014 322.222 0 288c.008-18.616 10.897-32.203 29.092-40 28.286-12.122 64.329-78.648 77.323-107.534 7.956-17.857 25.479-28.453 43.845-28.464l.001-.002h171.526c11.812 0 21.897 8.596 23.703 20.269 7.25 46.837 38.483 61.76 38.315 123.731-.007 2.724.195 13.254.195 16 0 50.654-22.122 81.574-71.263 72.6-9.297 18.597-39.486 30.738-62.315 16.45-21.177 24.645-53.896 22.639-70.944 6.299V467.2c0 24.15-20.201 44.8-43.826 44.8-23.283 0-43.826-21.35-43.826-44.8zM112 72V24c0-13.255 10.745-24 24-24h192c13.255 0 24 10.745 24 24v48c0 13.255-10.745 24-24 24H136c-13.255 0-24-10.745-24-24zm212-24c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z"/></svg>
+Click on the dropdown below to navigate to different resources</p>
 <div id="section" class="section level2 tabset tabset-dropdown">
-<h2></h2>
+<h2 class="tabset tabset-dropdown"></h2>
 <div id="wanted-alive-poster" class="section level3">
 <h3>Wanted Alive Poster</h3>
 <p><img src="images/ab_poster.png" /></p>
@@ -316,18 +323,33 @@ $(document).ready(function () {
 <h3>Abalone Comparative ID Card</h3>
 <div class="figure">
 <img src="images/compartive_id.png" alt="" />
-<p class="caption">Compartive images of the five subtidal abalone species found in the Southern California Bight</p>
+<p class="caption">Compartive images of the five subtidal abalone
+species found in the Southern California Bight</p>
 </div>
 <ul>
-<li><a href="./images/Abalone-id-cards_5x8.pdf" target="_blank">Click here to access the comperative field ID card</a></li>
+<li><a href="./images/Abalone-id-cards_5x8.pdf" target="_blank">Click
+here to access the comperative field ID card</a></li>
 </ul>
 </div>
 <div id="habitat-characterization-data-sheet" class="section level3">
 <h3>Habitat Characterization Data Sheet</h3>
-<p><strong>Habitat Characterization Data Sheet</strong> – Each dive team completes a habitat data sheet (see below) topside, after the dive team exits the water. It is not necessary for the data sheet to be carried by the divers during the dive. The purpose of this data sheet is to provide a <em>qualitative</em> characterization of some of the more important features of the habitat. The habitat data sheet references the scoring protocols for each of the categories: algae, invertebrates, relief, substrate, rock type, and quality of abalone habitat. The last of these is a subjective assessment based on the experience of the diver. Empty shells seen during the dive should be noted on this data sheet as well.</p>
-<p><strong>Please upload your completed habit characterization data sheet along with your <a href="https://forms.gle/7ES7mD9mbVvvCtKX9" target="_blank">abalone field observation</a></strong></p>
+<p><strong>Habitat Characterization Data Sheet</strong> – Each dive team
+completes a habitat data sheet (see below) topside, after the dive team
+exits the water. It is not necessary for the data sheet to be carried by
+the divers during the dive. The purpose of this data sheet is to provide
+a <em>qualitative</em> characterization of some of the more important
+features of the habitat. The habitat data sheet references the scoring
+protocols for each of the categories: algae, invertebrates, relief,
+substrate, rock type, and quality of abalone habitat. The last of these
+is a subjective assessment based on the experience of the diver. Empty
+shells seen during the dive should be noted on this data sheet as
+well.</p>
+<p><strong>Please upload your completed habit characterization data
+sheet along with your <a href="https://forms.gle/7ES7mD9mbVvvCtKX9"
+target="_blank">abalone field observation</a></strong></p>
 <ul>
-<li><a href="./files/Habitat_data_sheet.pdf" target="_blank">Click here to download the habitat characterization data sheet</a></li>
+<li><a href="./files/Habitat_data_sheet.pdf" target="_blank">Click here
+to download the habitat characterization data sheet</a></li>
 </ul>
 </div>
 </div>
@@ -335,7 +357,7 @@ $(document).ready(function () {
 
 <div class="footer"> 
 <img src="images/footer.png" alt= "footer image" /> 
-</div>
+</div> 
 
 
 
