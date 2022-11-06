@@ -21,6 +21,6 @@ read_csv("shells.csv") %>%
     text = subtitle, 
     tags = paste("All;", side),
     image = img,
-    width = "row-cols-4"
+    width = "row-cols-2"
 )
 ```
