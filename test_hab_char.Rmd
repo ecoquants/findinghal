@@ -1,0 +1,28 @@
+---
+title: "Test_Hab_Char"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
+```
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
+Tried using the BS4cards template that @bbest worked up for the _shell images, but isa no worky so good
+
+```{r shells}
+librarian::shelf(
+  bs4cards, dplyr, htmltools, knitr, purrr, readr)
+  
+read_csv("hab_char.csv") %>% 
+  arrange(title, sp) %>% 
+  cards(
+    title = title,
+    text = subtitle, 
+    tags = paste("All;", sp),
+    image = img,
+    width = "row-cols-2"
+)
+```

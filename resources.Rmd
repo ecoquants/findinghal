@@ -3,7 +3,7 @@ title: "Resources"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
 ```
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
@@ -35,3 +35,4 @@ Here's how you can help positively ID white abalone!
 **Please upload your completed habit characterization data sheet along with your [abalone field observation](https://forms.gle/7ES7mD9mbVvvCtKX9){target="_blank"}** 
 
 - [Click here to download the habitat characterization data sheet](./files/Habitat_data_sheet.pdf){target="_blank"}
+
