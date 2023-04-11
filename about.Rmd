@@ -3,11 +3,10 @@ title: "About Hal"
 description: ""
 ---
 
-White abalone (*Haliotus sorenseni*) belongs to a group of plant-eating marine snails that were once common in California. They once numbered in the millions off the California coast, but now they are endangered. In 2001 white abalone became the first ever marine invertebrate to be Listed as endangered under the [Endangered Species Act](https://www.fisheries.noaa.gov/topic/laws-policies#endangered-species-act). White abalone are one of [NOAA Fisheries' Species in the Spotlight](https://www.fisheries.noaa.gov/species/white-abalone/spotlight)—an initiative that includes animals considered most at risk for extinction and prioritizes their recovery efforts. Source: [NOAA Fisheries](https://www.fisheries.noaa.gov/species/white-abalone#overview)
+White abalone (*Haliotus sorenseni*) belongs to a group of plant-eating marine snails that were once common in California. They once numbered in the millions off the California coast, but now they are endangered. In 2001 white abalone became the first ever marine invertebrate to be Listed as endangered under the [Endangered Species Act](https://www.fisheries.noaa.gov/topic/laws-policies#endangered-species-act). White abalone are one of [NOAA Fisheries' Species in the Spotlight](https://www.fisheries.noaa.gov/species/white-abalone/spotlight)---an initiative that includes animals considered most at risk for extinction and prioritizes their recovery efforts. Source: [NOAA Fisheries](https://www.fisheries.noaa.gov/species/white-abalone#overview)
 
 As part of the *Wanted Alive! White Abalone* campaign,Finding Hal is sponsored and funded by the [National Marine Sanctuary Foundation](https://marinesanctuary.org/), implemented through [Ecoquants](https://ecoquants.com/). Partners involved with the campaign (but not hosting this web portal) include [NOAA Channel Islands National Marine Sanctuary](http://channelislands.noaa.gov/) and [NOAA Fisheries Office of Protected Resources](https://www.fisheries.noaa.gov/about/office-protected-resources).
 
+Questions or comments about this site? Please reach out to [keighley.lane\@noaa.gov](mailto::keighley.lane@noaa.gov)
 
-Questions or comments about this site? Please reach out to [julie.bursek@noaa.gov](mailto::julie.bursek@noaa.gov) or  [pike.spector@noaa.gov](mailto::pike.spector@noaa.gov) 
-
-![Source: Kat Magaña/CDFW](./images/white_ab_adult_Kat_Magana.png){width=50%}
+![Source: Kat Magaña/CDFW](./images/white_ab_adult_Kat_Magana.png){width="50%"}
