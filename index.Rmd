@@ -23,7 +23,7 @@ Going diving? Be sure to visit our [Resources](resources.html) page for more SCU
 Please submit your abalone field observation here: 
 <a
 class="btn btn-primary fa fa-paper-plane"
-href="https://forms.gle/7ES7mD9mbVvvCtKX9" target="_blank"> Submit an observation</a>
+href="https://forms.gle/MqmkLdSohEDittnJ7" target="_blank"> Submit an observation</a>
 
 *Note: No information will be shared publicly; media will only be used to identify white abalone.*
 
