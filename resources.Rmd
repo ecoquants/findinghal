@@ -42,7 +42,11 @@ Each dive team completes a habitat data sheet topside, after the dive team exits
 - [Click here to download the habitat characterization data sheet](./files/Habitat_data_sheet.pdf){target="_blank"}
 
 
-**Please upload your completed habit characterization data sheet along with your [abalone field observation](https://forms.gle/QHMorg3k1w9QU4CH8{target="_blank"}** 
+**Please upload your completed habit characterization data sheet along with your [abalone field observation](https://forms.gle/QHMorg3k1w9QU4CH8){target="_blank"}** 
 
+<hr>
 
+Need help identifiying the species on the habitat characterization sheet? [Click here to download the habitat characterization data sheet](./files/Hab_Char_spp.pdf){target="_blank"}
 
+<img  style="float: center" src="./images/Hab_Char_spp1.jpg" width="33%" height="33%"> 
+<img  style="float: center" src="./images/Hab_Char_spp2.jpg" width="33%" height="33%"> 
