@@ -29,10 +29,8 @@ href="https://forms.gle/QHMorg3k1w9QU4CH8" target="_blank"> Submit an observatio
 
 ![A wild white abalone (*H. sorenseni*) seen in the field in its preferred habitat. Source: Athena Maguire/CDFW](./images/wild_white.jpg){width=75%}
 
+### About
 
-As part of the *Wanted Alive! White Abalone* campaign, Finding Hal sponsored and funded by the [National Marine Sanctuary Foundation](https://marinesanctuary.org/), implemented through [Ecoquants](https://ecoquants.com/). Partners involved with the campaign (but not hosting this web portal) include the [NOAA Channel Islands National Marine Sanctuary](http://channelislands.noaa.gov/) and [NOAA Fisheries Office of Protected Resources](https://www.fisheries.noaa.gov/about/office-protected-resources).
+As part of the *Wanted Alive! White Abalone* campaign, Finding Hal sponsored and funded by the [National Marine Sanctuary Foundation](https://marinesanctuary.org/), implemented through [EcoQuants](https://ecoquants.com/). Partners involved with the campaign (but not hosting this web portal) include the [NOAA Channel Islands National Marine Sanctuary](http://channelislands.noaa.gov/) and [NOAA Fisheries Office of Protected Resources](https://www.fisheries.noaa.gov/about/office-protected-resources).
 
-### Citizen Science
-
-The collection of Finding Hal information is authorized under the OMB Control Number included in the [Citizen Science & Crowdsourcing Information Collection page](https://www.fisheries.noaa.gov/national/science-data/citizen-science-crowdsourcing-information-collections).
-
+The collection of *Wanted Alive! White Abalone* information is authorized under the OMB Control Number included in the [Citizen Science & Crowdsourcing Information Collection page](https://www.fisheries.noaa.gov/national/science-data/citizen-science-crowdsourcing-information-collections).
