@@ -13,19 +13,19 @@
 
 <title>Finding Hal</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.26/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
-<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
-<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.7.0/transition.js"></script>
+<script src="site_libs/bs3compat-0.7.0/tabs.js"></script>
+<script src="site_libs/bs3compat-0.7.0/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8NJ7ZZRW8"></script>
 <script>
@@ -144,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -177,8 +181,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -186,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -334,10 +331,12 @@ href="https://forms.gle/QHMorg3k1w9QU4CH8" target="_blank"> Submit an
 observation</a></p>
 <p><em>Note: No information will be shared publicly; media will only be
 used to identify white abalone.</em></p>
-<div class="figure">
-<img src="images/wild_white.JPG" style="width:75.0%" alt="" />
-<p class="caption">A wild white abalone (<em>H. sorenseni</em>) seen in
-the field in its preferred habitat. Source: Athena Maguire/CDFW</p>
+<div class="float">
+<img src="images/wild_white.JPG" style="width:75.0%"
+alt="A wild white abalone (H. sorenseni) seen in the field in its preferred habitat. Source: Athena Maguire/CDFW" />
+<div class="figcaption">A wild white abalone (<em>H. sorenseni</em>)
+seen in the field in its preferred habitat. Source: Athena
+Maguire/CDFW</div>
 </div>
 <p>As part of the <em>Wanted Alive! White Abalone</em> campaign, Finding
 Hal sponsored and funded by the <a
@@ -349,6 +348,13 @@ href="http://channelislands.noaa.gov/">NOAA Channel Islands National
 Marine Sanctuary</a> and <a
 href="https://www.fisheries.noaa.gov/about/office-protected-resources">NOAA
 Fisheries Office of Protected Resources</a>.</p>
+</div>
+<div id="citizen-science" class="section level3">
+<h3>Citizen Science</h3>
+<p>The collection of Finding Hal information is authorized under the OMB
+Control Number included in the <a
+href="https://www.fisheries.noaa.gov/national/science-data/citizen-science-crowdsourcing-information-collections">Citizen
+Science &amp; Crowdsourcing Information Collection page</a>.</p>
 </div>
 
 <div class="footer"> 
