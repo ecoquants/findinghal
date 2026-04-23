@@ -3,31 +3,28 @@ title: "Finding Hal"
 description: |
   Let's find Hal, as in *Haliotis sorenseni*, aka white abalone!
 ---
-![](./images/banner.jpg)
 
+![](./images/banner.jpg)
 
 ### Calling all divers!
 
-We need your help to **find HAL**, endangered
-white abalone in the genus "*Haliotis*" in and around the Southern California Bight (Point Conception to Ensenada).
+We need your help to **find HAL**, endangered white abalone in the genus "*Haliotis*" in and around the Southern California Bight (Point Conception to Ensenada).
 
 White abalone (*Haliotis sorenseni*) are on the brink of extinction, **your** observations could contribute to the conservation of this endangered species.
 
-Use our [ID cards](cards.html) to see different abalone species, and help us positively ID white abalone. 
+Use our [ID cards](cards.html) to see different abalone species, and help us positively ID white abalone.
 
-Going diving? Be sure to visit our [Resources](resources.html) page for more SCUBA-related abalone ID and best practices. Want to learn more about these marine snails? Visit our [About](about.html) page for more information, or visit NOAA Fisheries to find out [why you should care about white abalone](https://www.fisheries.noaa.gov/feature-story/white-abalone-why-you-should-care-about-critter). 
-
+Going diving? Be sure to visit our [Resources](resources.html) page for more SCUBA-related abalone ID and best practices. Want to learn more about these marine snails? Visit our [About](about.html) page for more information, or visit NOAA Fisheries to find out [why you should care about white abalone](https://www.fisheries.noaa.gov/feature-story/white-abalone-why-you-should-care-about-critter).
 
 ### Already gone diving? {#submit}
 
-Please submit your abalone field observation here: 
-<a
+Please submit your abalone field observation here: <a
 class="btn btn-primary fa fa-paper-plane"
-href="https://forms.gle/QHMorg3k1w9QU4CH8" target="_blank"> Submit an observation</a>
+href="https://docs.google.com/forms/d/e/1FAIpQLSef5Aov2B2te1ROFkavMo993aUsa9Ac2bVzE8Qi988oApojPA/viewform?usp=publish-editor"> Submit an observation</a>
 
 *Note: No information will be shared publicly; media will only be used to identify white abalone.*
 
-![A wild white abalone (*H. sorenseni*) seen in the field in its preferred habitat. Source: Athena Maguire/CDFW](./images/wild_white.jpg){width=75%}
+![A wild white abalone (*H. sorenseni*) seen in the field in its preferred habitat. Source: Athena Maguire/CDFW](./images/wild_white.jpg){width="75%"}
 
 ### About
 
