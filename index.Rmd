@@ -36,7 +36,7 @@ href="https://docs.google.com/forms/d/e/1FAIpQLSef5Aov2B2te1ROFkavMo993aUsa9Ac2b
 
 *Note: No information will be shared publicly; media will only be used to identify white abalone.*
 
-![A wild white abalone (*H. sorenseni*) seen in the field in its preferred habitat. Source: Athena Maguire/CDFW](./images/wild_white.jpg){width="75%"}
+![A wild white abalone (*H. sorenseni*) seen in the field in its preferred habitat. Source: Athena Maguire/CDFW](images/20140610-white-abalone-athena-maguire-cdfw-1000.jpg)
 
 ### About
 
