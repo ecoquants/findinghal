@@ -68,6 +68,7 @@
         .nav-links {
             display: flex;
             gap: 2rem;
+            align-items: center; /* Vertically centers menu links with the button and logo */
         }
 
         .nav-links a {
@@ -99,7 +100,12 @@
             color: var(--ocean-teal);
         }
 
-        /* Hero Section with Video Background */
+        /* Mobile Menu Toggle Button (Hidden on Desktop) */
+        .menu-toggle {
+            display: none;
+        }
+
+        /* Hero Section with Muted Image Background */
         .hero {
             position: relative;
             height: 100vh;
@@ -109,20 +115,23 @@
             text-align: center;
             color: var(--text-light);
             overflow: hidden;
+            background-color: #001f26; /* Deep dark teal background for the image to blend into */
         }
 
- .video-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: -2;
-    background-color: var(--ocean-dark); /* Changed to a solid color fallback */
-}
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image fills the screen without stretching */
+            z-index: -2;
+            
+            /* Muting adjustments */
+            opacity: 0.55; /* Blends image with the dark background color beneath it */
+            filter: brightness(0.8) saturate(0.8); /* Dims and softens the colors for crisp text contrast */
+            background-color: var(--ocean-dark);
+        }
 
         .hero-overlay {
             position: absolute;
@@ -148,7 +157,6 @@
         .hero p {
             font-size: 1.5rem;
             font-family: var(--heading-font);
-            font-style: italic;
             margin-bottom: 2rem;
         }
 
@@ -269,14 +277,47 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none; /* Add a hamburger menu in production */
+            .menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                color: var(--text-light);
+                font-size: 2rem;
+                cursor: pointer;
+                transition: color 0.3s;
             }
+
+            .nav-links {
+                display: none; /* Hidden by default */
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                padding: 2rem 5%;
+                gap: 1.5rem;
+                text-align: center;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            /* class added dynamically via JavaScript */
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links .btn-submit {
+                align-self: center;
+                margin-top: 0.5rem;
+            }
+
             .section, .section:nth-child(even) {
                 flex-direction: column;
                 padding: 4rem 5%;
                 gap: 2rem;
             }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -285,47 +326,70 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav>
         <a href="#" class="logo">Finding Hal</a>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
         <div class="nav-links">
             <a href="#biology">About the White Abalone</a>
-            <a href="#identify">Identify</a>
             <a href="#search">The Search</a>
+            <a href="#dive">Come Diving</a>
+            <a href="#identify">Identify</a>
+            <a href="#aboutus">About Us</a>
             <a href="#resources">Resources</a>
-	    <a href="#aboutus">About Us</a>
-             <a href="https://docs.google.com/forms/d/e/1FAIpQLSef5Aov2B2te1ROFkavMo993aUsa9Ac2bVzE8Qi988oApojPA/viewform" target="_blank" class="btn-submit">Submit Observation</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSef5Aov2B2te1ROFkavMo993aUsa9Ac2bVzE8Qi988oApojPA/viewform" target="_blank" class="btn-submit">Submit Observation</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <video class="video-bg" autoplay loop muted playsinline>
-            <source src="KelpForest_SandraTraverso_SlowShort.mp4" type="video/mp4">
-        </video>
+        <img class="hero-bg" src="David_Witting_NOAARC_WhiteAb.JPG" alt="Muted underwater kelp forest background">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Wanted Alive: White Abalone</h1>
-            <p>White abalone (<i>Haliotis sorenseni</i>) are on the brink of extinction. We need your help finding this critically endangered species in the Southern California Bight. </strong></p>
+            <h1>Wanted Alive:</h1>
+	    <h1>White Abalone</h1>
+            <p>White abalone (<i>Haliotis sorenseni</i>) are on the brink of extinction. We need your help finding this critically endangered species in the Southern California Bight.</p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSef5Aov2B2te1ROFkavMo993aUsa9Ac2bVzE8Qi988oApojPA/viewform" target="_blank" class="btn-submit" style="font-size: 1.2rem; padding: 1rem 2rem;">Report a Sighting</a>
         </div>
     </section>
 
-    <!-- White Abalone -->
     <section id="biology" class="section">
         <div class="section-text">
             <h2>About the White Abalone</h2>
-            <p> White abalone  (<i>Haliotis sorenseni</i>) belong to a group of plant-eating marine snails that were once common in California. They once numbered in the millions off the California coast, but are now critically endangered.</p>
-<p>In 2001, white abalone became the first ever marine invertebrate to be Listed as endangered under the <a href="https://www.fisheries.noaa.gov/topic/laws-policies#endangered-species-act" target="_blank" style="color: #008DA8; text-decoration: underline;">Endangered Species Act</a>. White abalone are one of <a href="https://www.fisheries.noaa.gov/species/white-abalone/spotlight" target="_blank" style="color: #008DA8; text-decoration: underline;">NOAA Fisheries’ Species in the Spotlight</a>. This initiative highlighted animals considered most at risk for extinction and prioritizes their recovery efforts. <a href="https://www.fisheries.noaa.gov/feature-story/white-abalone-why-you-should-care-about-critter" target="_blank" style="color: #008DA8; text-decoration: underline;">Learn more about why you should care about this critter</a>.</p>
+            <p>White abalone (<i>Haliotis sorenseni</i>) belong to a group of plant-eating marine snails that were once common in California. They once numbered in the millions off the California coast, but are now critically endangered.</p>
+            <p>In 2001, white abalone became the first ever marine invertebrate to be Listed as endangered under the <a href="https://www.fisheries.noaa.gov/topic/laws-policies#endangered-species-act" target="_blank" style="color: #008DA8; text-decoration: underline;">Endangered Species Act</a>. White abalone are one of <a href="https://www.fisheries.noaa.gov/species/white-abalone/spotlight" target="_blank" style="color: #008DA8; text-decoration: underline;">NOAA Fisheries’ Species in the Spotlight</a>. This initiative highlighted animals considered most at risk for extinction and prioritizes their recovery efforts. <a href="https://www.fisheries.noaa.gov/feature-story/white-abalone-why-you-should-care-about-critter" target="_blank" style="color: #008DA8; text-decoration: underline;">Learn more about why you should care about this critter</a>.</p>
         </div>
         <div class="section-image">
-<a href="https://www.fisheries.noaa.gov/species/white-abalone" target="_blank">
-            <img src="David_Witting_NOAARC_WhiteAb.JPG" alt="White abalone">
-</a>
+            <a href="https://www.fisheries.noaa.gov/species/white-abalone" target="_blank">
+                <img src="David_Witting_NOAARC_WhiteAb.JPG" alt="White abalone">
+            </a>
         </div>
     </section>
 
-    <!-- Identification -->
+    <section id="search" class="section">
+        <div class="section-text">
+            <h2>The Northern Channel Islands Search</h2>
+            <p>Our current focus zeroes in on the Northern Channel Islands within the <a href="https://channelislands.noaa.gov/" target="_blank" style="color: #008DA8; text-decoration: underline;">Channel Islands National Marine Sanctuary</a>. Historically, this region was key habitat for California abalone species.</p>
+            <p>We are asking all divers exploring Point Conception down through the Southern California Bight to be our eyes in the water. <a href="https://docs.google.com/forms/d/e/1FAIpQLSef5Aov2B2te1ROFkavMo993aUsa9Ac2bVzE8Qi988oApojPA/viewform" target="_blank" style="color: #008DA8; text-decoration: underline;">Submit observations of white abalone here</a>.</p>
+        </div>
+        <div class="section-image">
+            <a href="https://channelislands.noaa.gov/" target="_blank">
+                <img src="https://nmssanctuaries.blob.core.windows.net/sanctuaries-prod/media/archive/pgallery/atlasmaps/images/ci_2000.jpg" alt="Map of the Channel Islands">
+            </a>
+        </div>
+    </section>
+
+    <section id="dive" class="section">
+        <div class="section-text">
+            <h2>Come Diving with Us!</h2>
+            <p>Community members are essential to our mission. Want to dive on a charter funded by Aquarium of the Pacific to look for white abalone in the Channel Islands National Marine Sanctuary? Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGxqbxmnWdNK6qBcQs6bgCc_PLkK2zE5Bvj-lHAYk4VlduIg/viewform?usp=header" target="_blank" style="color: #008DA8; text-decoration: underline;">interest form</a>. Or email us at channel.islands@noaa.gov </p>
+            <p>2026 dive dates: July 28 and August 25</p>
+        </div>
+        <div class="section-image">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGxqbxmnWdNK6qBcQs6bgCc_PLkK2zE5Bvj-lHAYk4VlduIg/viewform?usp=header" target="_blank">
+                <img src="WAWA_Boat_Group.jpeg" alt="Recreational Dive Charter">
+            </a>
+        </div>
+    </section>
+
     <section id="identify" class="section">
         <div class="section-text">
             <h2>How to Identify Abalone</h2>
@@ -333,44 +397,23 @@
             <p><a href="AbaloneIDGuide_FullSet_2025.pdf" target="_blank" style="color: #008DA8; text-decoration: underline;">Check out our abalone identification guide</a>, developed in partnership with <a href="http://www.orianapoindexter.com/" target="_blank" style="color: #008DA8; text-decoration: underline;">Oriana Poindexter</a>. They provide information on the morphology, habitat, and diets of five subtidal species found in the Southern California Bight.</p>
         </div>
         <div class="section-image">
-<a href="AbaloneIDGuide_FullSet_2025.pdf" target="_blank">
-            <img src="OnePage_Abalone.jpg" alt="Guide to identifying abalone">
-</a>
+            <a href="AbaloneIDGuide_FullSet_2025.pdf" target="_blank">
+                <img src="OnePage_Abalone.jpg" alt="Guide to identifying abalone">
+            </a>
         </div>
     </section>
 
-
-    <!-- The Search Area -->
-    <section id="search" class="section">
+    <section id="aboutus" class="section">
         <div class="section-text">
-            <h2>The Northern Channel Islands Search</h2>
-            <p>Our current focus zeroes in on the Northern Channel Islands within the <a href="https://channelislands.noaa.gov/" target="_blank" style="color: #008DA8; text-decoration: underline;">Channel Islands National Marine Sanctuary</a>. Historically, this region was key habitat for California abalone species.</p>
-            <p> We are asking all divers exploring Point Conception down through the Southern California Bight to be our eyes in the water. <a href="https://docs.google.com/forms/d/e/1FAIpQLSef5Aov2B2te1ROFkavMo993aUsa9Ac2bVzE8Qi988oApojPA/viewform" target="_blank" style="color: #008DA8; text-decoration: underline;">Submit observations of white abalone here</a>.</p>
+            <h2>About Us</h2>
+            <p>As part of the Wanted Alive! White Abalone campaign, Finding Hal is sponsored and funded by the <a href="https://marinesanctuary.org/" target="_blank" style="color: #008DA8; text-decoration: underline;">National Marine Sanctuary Foundation</a>, implemented through <a href="https://ecoquants.com/" target="_blank" style="color: #008DA8; text-decoration: underline;">EcoQuants</a>. Partners involved with the campaign (but not hosting this web portal) include the <a href="http://channelislands.noaa.gov/" target="_blank" style="color: #008DA8; text-decoration: underline;">NOAA Channel Islands National Marine Sanctuary</a>, <a href="https://www.aquariumofpacific.org/" target="_blank" style="color: #008DA8; text-decoration: underline;">Aquarium of the Pacific</a> and <a href="https://www.fisheries.noaa.gov/about/office-protected-resources" target="_blank" style="color: #008DA8; text-decoration: underline;">NOAA Fisheries Office of Protected Resources</a>.</p>
+            <p>The collection of Wanted Alive! White Abalone information is authorized under the OMB Control Number included in the <a href="https://www.fisheries.noaa.gov/national/science-data/citizen-science-crowdsourcing-information-collections" target="_blank" style="color: #008DA8; text-decoration: underline;">Citizen Science & Crowdsourcing Information Collection page</a>.</p>
         </div>
         <div class="section-image">
-<!-- Paste your destination web link between the quotes for href -->
-            <a href="https://channelislands.noaa.gov/" target="_blank">
-            <img src="https://nmssanctuaries.blob.core.windows.net/sanctuaries-prod/media/archive/pgallery/atlasmaps/images/ci_2000.jpg" alt="Map of the Channel Islands">
-</a>
+            <img src="WAWAdivers.jpg" alt="Two scientists ready to survey habitat for white abalone">
         </div>
     </section>
 
-
-
-    <!-- About Section -->
-    <section id="aboutus" class="section">
-      <div class="section-text">
-        <h2>About Us</h2>
-        <p> As part of the Wanted Alive! White Abalone campaign, Finding Hal is sponsored and funded by the <a href="https://marinesanctuary.org/" target="_blank" style="color: #008DA8; text-decoration: underline;">National Marine Sanctuary Foundation</a>, implemented through <a href="https://ecoquants.com/" target="_blank" style="color: #008DA8; text-decoration: underline;">EcoQuants</a>. Partners involved with the campaign (but not hosting this web portal) include the <a href="http://channelislands.noaa.gov/" target="_blank" style="color: #008DA8; text-decoration: underline;">NOAA Channel Islands National Marine Sanctuary</a> and <a href="https://www.fisheries.noaa.gov/about/office-protected-resources" target="_blank" style="color: #008DA8; text-decoration: underline;">NOAA Fisheries Office of Protected Resources</a>.</p>
-<p> The collection of Wanted Alive! White Abalone information is authorized under the OMB Control Number included in the <a href="https://www.fisheries.noaa.gov/national/science-data/citizen-science-crowdsourcing-information-collections" target="_blank" style="color: #008DA8; text-decoration: underline;">Citizen Science & Crowdsourcing Information Collection page</a>.</p>
-        </div>
-<div class="section-image">
-                    <img src="WAWAdivers.jpg" alt="Two scientists ready to survey habitat for white abalone">
-
-    </section>
-
-
-<!-- Diver Resources -->
     <section id="resources" class="resources">
         <h2>Diver Resources</h2>
         <p>Download our official field materials to take with you on your next dive.</p>
@@ -378,25 +421,39 @@
             <div class="attachment-card">
                 <h3>Abalone ID Cards</h3>
                 <p>Abalone identification cards based on morphology.</p>
-                <!-- Paste your image URL between the quotes below -->
                 <a href="AbaloneIDGuide_FullSet_2025.pdf" target="_blank">View ID Cards &rarr;</a>
             </div>
             <div class="attachment-card">
-                <h3>Diver Guidelines </h3>
-                <p>Best practices for recording data about a white abalone. </p>
+                <h3>Diver Guidelines</h3>
+                <p>Best practices for recording data about a white abalone.</p>
                 <a href="WAWA_Poster.png" target="_blank">View Guidelines &rarr;</a>
             </div>
             <div class="attachment-card">
                 <h3>Habitat Characterization</h3>
                 <p>Datasheet for divers to record habitat type, flora, and fauna.</p>
-                <!-- Paste your image URL between the quotes below -->
                 <a href="Hab_Char_Datasheet.pdf" target="_blank">View Datasheet &rarr;</a>
             </div>
         </div>
     </section>
 
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
 
+        // Toggle visibility and change icon when hamburger is tapped
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.textContent = menuToggle.textContent === '☰' ? '✕' : '☰';
+        });
 
+        // Automatically close the menu when any link inside it is tapped
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.textContent = '☰';
+            });
+        });
+    </script>
 
 </body>
 </html>
