@@ -16,6 +16,18 @@ Use our [ID cards](cards.html) to see different abalone species, and help us pos
 
 Going diving? Be sure to visit our [Resources](resources.html) page for more SCUBA-related abalone ID and best practices. Want to learn more about these marine snails? Visit our [About](about.html) page for more information, or visit NOAA Fisheries to find out [why you should care about white abalone](https://www.fisheries.noaa.gov/feature-story/white-abalone-why-you-should-care-about-critter).
 
+**Want to dive charter funded by Aquarium of the Pacific to look for white abalone in the Channel Islands National Marine Sanctuary?**
+
+**2026 dates**
+
+-   July 28th
+
+-   August 25th
+
+[Click here for rec dive interest form](https://docs.google.com/forms/d/e/1FAIpQLSfGxqbxmnWdNK6qBcQs6bgCc_PLkK2zE5Bvj-lHAYk4VlduIg/viewform?usp=header)
+
+or email channel.islands\@noaa.gov
+
 ### Already gone diving? {#submit}
 
 Please submit your abalone field observation here: <a
@@ -24,10 +36,10 @@ href="https://docs.google.com/forms/d/e/1FAIpQLSef5Aov2B2te1ROFkavMo993aUsa9Ac2b
 
 *Note: No information will be shared publicly; media will only be used to identify white abalone.*
 
-![A wild white abalone (*H. sorenseni*) seen in the field in its preferred habitat. Source: Athena Maguire/CDFW](./images/wild_white.jpg){width="75%"}
+![A wild white abalone (*H. sorenseni*) seen in the field in its preferred habitat. Source: Athena Maguire/CDFW](images/20140610-white-abalone-athena-maguire-cdfw-1000.jpg)
 
 ### About
 
-As part of the *Wanted Alive! White Abalone* campaign, Finding Hal sponsored and funded by the [National Marine Sanctuary Foundation](https://marinesanctuary.org/), implemented through [EcoQuants](https://ecoquants.com/). Partners involved with the campaign (but not hosting this web portal) include the [NOAA Channel Islands National Marine Sanctuary](http://channelislands.noaa.gov/) and [NOAA Fisheries Office of Protected Resources](https://www.fisheries.noaa.gov/about/office-protected-resources).
+As part of the *Wanted Alive! White Abalone* campaign, Finding Hal sponsored and funded by the [National Marine Sanctuary Foundation](https://marinesanctuary.org/), implemented through [EcoQuants](https://ecoquants.com/). Partners involved with the campaign (but not hosting this web portal) include the [NOAA Channel Islands National Marine Sanctuary](http://channelislands.noaa.gov/), [Aquarium of the Pacific](https://www.aquariumofpacific.org/) and [NOAA Fisheries Office of Protected Resources](https://www.fisheries.noaa.gov/about/office-protected-resources).
 
 The collection of *Wanted Alive! White Abalone* information is authorized under the OMB Control Number included in the [Citizen Science & Crowdsourcing Information Collection page](https://www.fisheries.noaa.gov/national/science-data/citizen-science-crowdsourcing-information-collections).
