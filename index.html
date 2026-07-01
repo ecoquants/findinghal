@@ -116,6 +116,7 @@
             color: var(--text-light);
             overflow: hidden;
             background-color: #001f26; /* Deep dark teal background for the image to blend into */
+            z-index: 1; /* FIX: Prevents negative z-index child elements from vanishing behind the body background */
         }
 
         .hero-bg {
@@ -275,6 +276,39 @@
             box-shadow: 0 6px 20px rgba(0, 141, 168, 0.6);
         }
 
+        /* Partner Logos Section styles */
+        .partner-section {
+            background-color: #ffffff;
+            padding: 4rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .partner-section h2 {
+            font-size: 2rem;
+            color: var(--ocean-dark);
+            margin-bottom: 2.5rem;
+        }
+
+        .partner-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .partner-logo {
+            max-width: 160px;
+            max-height: 70px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(0%); /* Keeps logos in full color */
+            opacity: 1;            /* Keeps logos fully visible */
+            transition: all 0.3s ease;
+        }
+
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .menu-toggle {
@@ -321,6 +355,15 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
+
+            /* Adjust partner spacing on smaller devices */
+            .partner-grid {
+                gap: 2.5rem;
+            }
+            
+            .partner-logo {
+                max-width: 130px;
+            }
         }
     </style>
 </head>
@@ -341,11 +384,11 @@
     </nav>
 
     <section class="hero">
-        <img class="hero-bg" src="David_Witting_NOAARC_WhiteAb.JPG" alt="Muted underwater kelp forest background">
+        <img class="hero-bg" src="WhiteAbalone_CDFW_AthenaMaguire.jpg" alt="Muted underwater kelp forest background">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Wanted Alive:</h1>
-	    <h1>White Abalone</h1>
+            <h1>White Abalone</h1>
             <p>White abalone (<i>Haliotis sorenseni</i>) are on the brink of extinction. We need your help finding this critically endangered species in the Southern California Bight.</p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSef5Aov2B2te1ROFkavMo993aUsa9Ac2bVzE8Qi988oApojPA/viewform" target="_blank" class="btn-submit" style="font-size: 1.2rem; padding: 1rem 2rem;">Report a Sighting</a>
         </div>
@@ -381,7 +424,7 @@
         <div class="section-text">
             <h2>Come Diving with Us!</h2>
             <p>Community members are essential to our mission. Want to dive on a charter funded by Aquarium of the Pacific to look for white abalone in the Channel Islands National Marine Sanctuary? Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGxqbxmnWdNK6qBcQs6bgCc_PLkK2zE5Bvj-lHAYk4VlduIg/viewform?usp=header" target="_blank" style="color: #008DA8; text-decoration: underline;">interest form</a>. Or email us at channel.islands@noaa.gov </p>
-            <p>2026 dive dates: July 28 and August 25</p>
+            <p><strong>2026 dive dates: July 28 and August 25</strong></p>
         </div>
         <div class="section-image">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGxqbxmnWdNK6qBcQs6bgCc_PLkK2zE5Bvj-lHAYk4VlduIg/viewform?usp=header" target="_blank">
@@ -406,7 +449,21 @@
     <section id="aboutus" class="section">
         <div class="section-text">
             <h2>About Us</h2>
-            <p>As part of the Wanted Alive! White Abalone campaign, Finding Hal is sponsored and funded by the <a href="https://marinesanctuary.org/" target="_blank" style="color: #008DA8; text-decoration: underline;">National Marine Sanctuary Foundation</a>, implemented through <a href="https://ecoquants.com/" target="_blank" style="color: #008DA8; text-decoration: underline;">EcoQuants</a>. Partners involved with the campaign (but not hosting this web portal) include the <a href="http://channelislands.noaa.gov/" target="_blank" style="color: #008DA8; text-decoration: underline;">NOAA Channel Islands National Marine Sanctuary</a>, <a href="https://www.aquariumofpacific.org/" target="_blank" style="color: #008DA8; text-decoration: underline;">Aquarium of the Pacific</a> and <a href="https://www.fisheries.noaa.gov/about/office-protected-resources" target="_blank" style="color: #008DA8; text-decoration: underline;">NOAA Fisheries Office of Protected Resources</a>.</p>
+            <p>As part of the Wanted Alive! White Abalone campaign, Finding Hal is sponsored and 
+            funded by the <a href="https://marinesanctuary.org/" target="_blank" style="color: #008DA8; text-decoration: underline;">National Marine Sanctuary Foundation</a>, 
+            implemented through <a href="https://ecoquants.com/" target="_blank" style="color: #008DA8; text-decoration: underline;">EcoQuants</a>. 
+            Partners involved with the campaign (but not hosting this web portal) include the
+             <a href="http://channelislands.noaa.gov/" target="_blank" style="color: #008DA8; text-decoration: underline;">NOAA Channel Islands National Marine Sanctuary</a>, 
+             <a href="https://www.aquariumofpacific.org/" target="_blank" style="color: #008DA8; text-decoration: underline;">Aquarium of the Pacific</a> and
+              <a href="https://www.fisheries.noaa.gov/about/office-protected-resources" target="_blank" 
+              style="color: #008DA8; text-decoration: underline;">NOAA Fisheries Office of Protected Resources</a>. </p>
+            <p>The  <a href="https://www.aquariumofpacific.org/" target="_blank" style="color: #008DA8; text-decoration: underline;">Aquarium of the Pacific</a>
+            is a proud partner of the Channel Islands National Marine Sanctuary in the 
+            vital mission to protect and recover the critically endangered white abalone through the Wanted Alive program. 
+            Leveraging our deep biological and operational expertise, the Aquarium provides extensive scientific diving teams and 
+            logistics support for field research charters and community science initiatives, while directly collaborating on crucial in-water data collection. 
+            Our commitment extends from the ocean to the public; through financial sponsorships of program outreach materials, dedicated staffing, 
+            we bring the story of the imperiled white abalone directly to our 1.7 million annual guests, inspiring community action and fostering the next generation of marine stewards.</p>
             <p>The collection of Wanted Alive! White Abalone information is authorized under the OMB Control Number included in the <a href="https://www.fisheries.noaa.gov/national/science-data/citizen-science-crowdsourcing-information-collections" target="_blank" style="color: #008DA8; text-decoration: underline;">Citizen Science & Crowdsourcing Information Collection page</a>.</p>
         </div>
         <div class="section-image">
@@ -433,6 +490,16 @@
                 <p>Datasheet for divers to record habitat type, flora, and fauna.</p>
                 <a href="Hab_Char_Datasheet.pdf" target="_blank">View Datasheet &rarr;</a>
             </div>
+        </div>
+    </section>
+
+    <section class="partner-section">
+        <h2>Our Campaign Partners</h2>
+        <div class="partner-grid">
+            <img src="AoP_Logo.png" alt="Aquarium of the Pacific Logo" class="partner-logo" style="max-width: 175px; max-height: 90px;">
+            <img src="NMSF_Logo.png" alt="National Marine Sanctuary Foundation Logo" class="partner-logo" style="max-width: 175px; max-height: 90px;">
+            <img src="NOAA_NMFS.png" alt="NOAA National Marine Fisheries Service Logo" class="partner-logo" style="max-width: 150px; max-height: 90px;">
+            <img src="NOAA_NMS_Logo.png" alt="NOAA National Marine Sanctuaries Logo" class="partner-logo" style="max-width: 250px; max-height: 90px;">
         </div>
     </section>
 
